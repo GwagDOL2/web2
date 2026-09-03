@@ -1,0 +1,304 @@
+/* =========================
+   전체 페이지
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background-color: #f4f1ea;
+
+    font-family:
+            "Pretendard",
+            "Noto Sans KR",
+            Arial,
+            sans-serif;
+
+    color: #111;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   Library
+========================= */
+
+.library-container {
+    width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: 80px 50px 150px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 120px 80px;
+}
+
+
+/* =========================
+   Book Card
+========================= */
+
+.book-card {
+    position: relative;
+
+    min-height: 600px;
+
+    padding: 50px;
+
+    background-color: #ffffff;
+
+    border-radius: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition:
+            transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+            background-color 0.5s ease;
+}
+
+
+/* 카드마다 살짝 다른 느낌 */
+.book-card:nth-child(1) {
+    transform: rotate(-1deg);
+}
+
+.book-card:nth-child(2) {
+    transform: rotate(1.5deg);
+}
+
+.book-card:nth-child(3) {
+    transform: rotate(0.5deg);
+}
+
+.book-card:nth-child(4) {
+    transform: rotate(-1.5deg);
+}
+
+.book-card:nth-child(5) {
+    transform: rotate(1deg);
+}
+
+
+/* Hover */
+
+.book-card:hover {
+    transform: rotate(0deg) translateY(-15px);
+    background-color: #fff;
+}
+
+
+/* =========================
+   책 표지
+========================= */
+
+.book-cover {
+    width: 260px;
+    height: 360px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 45px;
+
+    box-shadow:
+            15px 20px 0 #111;
+
+    transition:
+            transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 0.6s ease;
+}
+
+
+/* Hover 시 책이 튀어나오는 느낌 */
+
+.book-card:hover .book-cover {
+    transform:
+            translateY(-15px)
+            rotate(2deg);
+
+    box-shadow:
+            25px 30px 0 #111;
+}
+
+
+/* =========================
+   책 제목
+========================= */
+
+.book-card h1 {
+    margin: 0;
+
+    max-width: 600px;
+
+    font-size: clamp(28px, 3vw, 48px);
+
+    font-weight: 800;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.05em;
+
+    color: #111;
+}
+
+
+/* =========================
+   페이지 수
+========================= */
+
+.book-card h2 {
+    margin: 20px 0 0;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    color: #666;
+
+    letter-spacing: -0.02em;
+}
+
+
+/* =========================
+   카드 앞 번호
+========================= */
+
+.book-card::before {
+    content: "BOOK";
+
+    position: absolute;
+
+    top: 25px;
+    left: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    color: #999;
+}
+
+
+/* =========================
+   카드 뒤 숫자
+========================= */
+
+.book-card::after {
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #999;
+
+    letter-spacing: 0.1em;
+}
+
+.book-card:nth-child(1)::after {
+    content: "01";
+}
+
+.book-card:nth-child(2)::after {
+    content: "02";
+}
+
+.book-card:nth-child(3)::after {
+    content: "03";
+}
+
+.book-card:nth-child(4)::after {
+    content: "04";
+}
+
+.book-card:nth-child(5)::after {
+    content: "05";
+}
+
+
+/* =========================
+   태블릿
+========================= */
+
+@media (max-width: 900px) {
+
+    .library-container {
+        padding: 60px 30px 100px;
+
+        grid-template-columns: 1fr;
+
+        gap: 80px;
+    }
+
+    .book-card {
+        min-height: 650px;
+    }
+
+    .book-cover {
+        width: 240px;
+        height: 330px;
+    }
+}
+
+
+/* =========================
+   모바일
+========================= */
+
+@media (max-width: 600px) {
+
+    .library-container {
+        padding: 30px 15px 80px;
+
+        gap: 50px;
+    }
+
+    .book-card {
+        min-height: 550px;
+
+        padding: 35px 20px;
+    }
+
+    .book-cover {
+        width: 190px;
+        height: 270px;
+
+        margin-bottom: 35px;
+
+        box-shadow:
+                10px 15px 0 #111;
+    }
+
+    .book-card h1 {
+        font-size: 28px;
+    }
+
+    .book-card h2 {
+        font-size: 14px;
+    }
+
+    .book-card:hover .book-cover {
+        box-shadow:
+                15px 20px 0 #111;
+    }
+}
