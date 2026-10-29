@@ -1,0 +1,22 @@
+.mailbox {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.mailbox h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.unread {
+    color: #d32f2f;
+    font-size: 18px;
+}
+
+.mailbox li {
+    padding: 4px 0;
+}

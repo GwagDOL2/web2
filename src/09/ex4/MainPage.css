@@ -1,0 +1,16 @@
+.warning {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ffebee;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    border-radius: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    padding: 6px 16px;
+    cursor: pointer;
+}

@@ -9,13 +9,15 @@ import "./index.css";
 //import TextInputWithFocusButton from "./07/02/TextinputWithFocusButton";
 //import MyButton from "./08/MyButton";
 //import MyButton2 from "./08/MyButton2";
-import MessageSender from "./08/MessageSender";
+//import MessageSender from "./08/MessageSender";
+//import LogInControl2 from "./09/ex3/LoginControl2";
+import MainPage from "./09/ex4/MainPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <MessageSender/>
+        <MainPage/>
     </React.StrictMode>
 );
 
