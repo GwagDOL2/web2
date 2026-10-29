@@ -10,9 +10,18 @@ function MainPage() {
     };
 
     return (
-        <div>
+        <div className="main-page">
+            <h1>알림 메시지</h1>
+            <p className="page-description">
+                버튼을 눌러 메시지를 확인하세요.
+            </p>
+
             <WarningBanner warning={showWarning} />
-            <button onClick={btnListener}>
+
+            <button
+                className="toggle-button"
+                onClick={btnListener}
+            >
                 {showWarning ? "감추기" : "보이기"}
             </button>
         </div>

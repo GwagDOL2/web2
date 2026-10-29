@@ -1,7 +1,8 @@
-import { useState } from "react";
-import Greeting from "../ex1/Greeting";
-import LoginButton from "../ex2/LoginButton";
+import React, { useState } from "react";
 import LogOutButton from "../ex2/LogOutButton";
+import LogInButton from "../ex2/LogInButton";
+import Greeting from "../ex1/Greeting";
+
 
 function LogInControl2() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -16,12 +17,10 @@ function LogInControl2() {
 
     let button;
 
-    if (isLoggedIn) {
-        button = <LogOutButton onClick={logOutClickListener} />;
-    } else {
-        button = <LoginButton onClick={logInClickListener} />;
-    }
-    button = isLoggedIn ? <LogOutButton onClick={logOutClickListener} /> : <LoginButton onClick={logInClickListener} />;
+    button = isLoggedIn
+        ? <LogOutButton onClick={logOutClickListener} />
+        : <LogInButton onClick={logInClickListener} />;
+
     return (
         <div>
             <Greeting isLoggedIn={isLoggedIn} />

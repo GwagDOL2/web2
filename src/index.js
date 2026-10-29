@@ -11,13 +11,14 @@ import "./index.css";
 //import MyButton2 from "./08/MyButton2";
 //import MessageSender from "./08/MessageSender";
 //import LogInControl2 from "./09/ex3/LoginControl2";
-import MainPage from "./09/ex4/MainPage";
+//import MainPage from "./09/ex4/MainPage";
+import LandingPage from "./09/finalEX/LandingPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
     <React.StrictMode>
-        <MainPage/>
+        <LandingPage/>
     </React.StrictMode>
 );
 
